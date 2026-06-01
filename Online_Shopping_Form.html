@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Shopping Form</title>
+
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="CssStyles.css">
+
+    <!-- Link to external JavaScript file -->
+    <script src="Scripts.js"></script>
+
+</head>
+<body>
+
+    <form id="OSHForm">
+        <table border="1">
+            <!-- Table headers -->
+            <tr>
+                <th>Items</th>
+                <th>Properties</th>
+                <th>Number of Items</th>
+                <th>Cost ($)</th>
+            </tr>
+
+            <!-- Samsung Item -->
+            <tr>
+                <td><label><input type="checkbox" id="Samsung"> Samsung</label></td>
+                <td>
+                    <label><input type="radio" name="PropertyS" value="1099" id="Samsung1"> S24 Ultra - 1099 ($)</label><br>
+                    <label><input type="radio" name="PropertyS" value="899" id="Samsung2"> S24 - 899 ($)</label><br>
+                    <label><input type="radio" name="PropertyS" value="999" id="Samsung3"> S24+ - 999 ($)</label><br>
+                    <label><input type="radio" name="PropertyS" value="0" id="SamsungNone"> None</label>
+                </td>
+                <td>
+                    <select name="NumberOfItemsS" id="NumberOfItemsS">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                </td>
+                <td><input type="text" id="Cost1" value="0" readonly></td>
+            </tr>
+
+            <!-- Apple Item -->
+            <tr>
+                <td><label><input type="checkbox" id="Apple"> Apple</label></td>
+                <td>
+                    <label><input type="radio" name="PropertyA" value="1299" id="Apple1"> iPhone 16 Pro Max - 1299 ($)</label><br>
+                    <label><input type="radio" name="PropertyA" value="1199" id="Apple2"> iPhone 16 Pro - 1199 ($)</label><br>
+                    <label><input type="radio" name="PropertyA" value="899" id="Apple3"> iPhone 16 Mini - 899 ($)</label><br>
+                    <label><input type="radio" name="PropertyA" value="0" id="AppleNone"> None</label>
+                </td>
+                <td>
+                    <select name="NumberOfItemsA" id="NumberOfItemsA">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                </td>
+                <td><input type="text" id="Cost2" value="0" readonly></td>
+            </tr>
+
+            <!-- Oppo Item -->
+            <tr>
+                <td><label><input type="checkbox" id="Oppo"> Oppo</label></td>
+                <td>
+                    <label><input type="radio" name="PropertyO" value="399" id="Oppo1"> Oppo Find X7 Ultra - 399 ($)</label><br>
+                    <label><input type="radio" name="PropertyO" value="299" id="Oppo2"> Oppo Find X7 Neo - 299 ($)</label><br>
+                    <label><input type="radio" name="PropertyO" value="199" id="Oppo3"> Oppo Find X7 - 199 ($)</label><br>
+                    <label><input type="radio" name="PropertyO" value="0" id="OppoNone"> None</label>
+                </td>
+                <td>
+                    <select name="NumberOfItemsO" id="NumberOfItemsO">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                </td>
+                <td><input type="text" id="Cost3" value="0" readonly></td>
+            </tr>
+
+            <!-- Xiaomi Item -->
+            <tr>
+                <td><label><input type="checkbox" id="Xiaomi"> Xiaomi</label></td>
+                <td>
+                    <label><input type="radio" name="PropertyX" value="899" id="Xiaomi1"> Xiaomi Redme Note 11 Pro Plus - 899 ($)</label><br>
+                    <label><input type="radio" name="PropertyX" value="799" id="Xiaomi2"> Xiaomi Redme Note 11 Pro - 799 ($)</label><br>
+                    <label><input type="radio" name="PropertyX" value="599" id="Xiaomi3"> Xiaomi Redme Note 11 - 599 ($)</label><br>
+                    <label><input type="radio" name="PropertyX" value="0" id="XiaomiNone"> None</label>
+                </td>
+                <td>
+                    <select name="NumberOfItemsX" id="NumberOfItemsX">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                </td>
+                <td><input type="text" id="Cost4" value="0" readonly></td>
+            </tr>
+
+            <!-- Total Cost -->
+            <tr>
+                <td colspan="2" style="text-align: left;">Total Cost</td>
+                <td>
+                    <button id="btn" type="button" onclick="calculateTotal()">Calculate</button>
+                </td>
+                <td style="text-align: center;">
+                    <p id="TotalCost">($) 0</p>
+                </td>
+            </tr>
+
+        </table>
+    </form>
+
+</body>
+</html>
